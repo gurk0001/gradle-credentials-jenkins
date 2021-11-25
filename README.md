@@ -4,6 +4,11 @@ at [tomgregory.com](https://www.tomgregory.com).
 ## Pre-requisites
 
 * Docker
+* If you are running it for the first time then use the following command to push Jenkin to popye's docker hub
+  ```
+  docker build -t popyeindia/popye-jenkins:0.0.1 .
+  docker push  popyeindia/popye-jenkins:0.0.1
+  ```
 
 ## Running
 

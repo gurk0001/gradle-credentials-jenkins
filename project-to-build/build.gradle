@@ -4,7 +4,7 @@ plugins {
 
 repositories {
     maven {
-        url 'http://archiva:8080/repository/snapshots'
+        url 'http://archiva:4333/repository/snapshots'
         credentials {
             username System.getenv('ARCHIVA_USR')
             password System.getenv('ARCHIVA_PSW')
@@ -13,5 +13,5 @@ repositories {
 }
 
 dependencies {
-    implementation group: 'com.tom', name: 'artifact-to-publish', version: project.version
+    implementation group: 'com.popye', name: 'artifact-to-publish', version: project.version
 }

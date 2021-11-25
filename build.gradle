@@ -1,15 +1,15 @@
 plugins {
-    id "com.palantir.docker" version "0.22.1"
-    id "com.palantir.docker-compose" version "0.22.1"
+    id "com.palantir.docker" version "0.31.0"
+    id "com.palantir.docker-compose" version "0.31.0"
 }
 
 allprojects {
-    group 'com.tom'
-    version '1.0-SNAPSHOT'
+    group 'com.popye'
+    version '0.0.1'
 }
 
 docker {
     name "${project.name}:${project.version}"
-    files "plugins.txt"
-    files "seedJob.xml"
+    files "plugins.txt", "seedJob.xml"
+    dockerfile file('Dockerfile')
 }

@@ -2,12 +2,12 @@ pipeline {
     agent any
 
     environment {
-        ARCHIVA = credentials('archiva')
+        ARCHIVA = credentials('popye-archiva')
     }
     stages {
         stage('Build') {
             steps {
-                git 'https://github.com/tkgregory/gradle-credentials-jenkins.git'
+                git 'https://github.com/gurk0001/gradle-credentials-jenkins.git'
 
                 sh './gradlew build --info --stacktrace'
             }

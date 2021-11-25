@@ -19,7 +19,7 @@
       scm {
         git{             
           remote {
-            url &apos;https://github.com/tkgregory/gradle-credentials-jenkins.git&apos;
+            url &apos;https://github.com/gurk0001/gradle-credentials-jenkins.git&apos;
             credentials &apos;git&apos;
           }
           branches &apos;master&apos;
@@ -49,7 +49,7 @@
       scm {
         git{             
           remote {
-            url &apos;https://github.com/tkgregory/gradle-credentials-jenkins.git&apos;
+            url &apos;https://github.com/gurk0001/gradle-credentials-jenkins.git&apos;
             credentials &apos;git&apos;
           }
           branches &apos;master&apos;
