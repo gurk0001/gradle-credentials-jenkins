@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        ARCHIVA = credentials('popye-archiva')
+        ARCHIVA = credentials('archiva')
     }
     stages {
         stage('Publish') {
