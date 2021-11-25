@@ -16,7 +16,7 @@ publishing {
 
     repositories {
         maven {
-            url = "http://localhost:4333/repository/snapshots"
+            url = "http://archiva:4333/repository/snapshots"
             allowInsecureProtocol true
             credentials {
                 username System.getenv('ARCHIVA_USR')
