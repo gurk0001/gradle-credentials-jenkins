@@ -3,6 +3,7 @@ pipeline {
 
     environment {
         ARCHIVA = credentials('archiva')
+        ARCHIVA_URL = "archiva:8080"
     }
     stages {
         stage('Build') {

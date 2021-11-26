@@ -15,13 +15,17 @@ publishing {
     }
 
     repositories {
+       mavenLocal()
         maven {
             //url = "http://localhost:4333/repository/snapshots"
-            url 'http://archiva:8080/repository/snapshots'
+            //url 'http://archiva:8080/repository/snapshots'
+            def ARCHIVA_URL = System.getenv('ARCHIVA_URL')
+            url "http://${ARCHIVA_URL}/repository/snapshots"
+
             allowInsecureProtocol true
             credentials {
-                username 'admin' //System.getenv('ARCHIVA_USR')
-                password 'popye@123' //System.getenv('ARCHIVA_PSW')
+                username System.getenv('ARCHIVA_USR')
+                password System.getenv('ARCHIVA_PSW')
             }
         }
     }
