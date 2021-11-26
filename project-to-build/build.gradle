@@ -5,10 +5,11 @@ plugins {
 repositories {
     maven {
         url 'http://archiva:8080/repository/snapshots'
+        //url 'http://localhost:4333/repository/snapshots'
         allowInsecureProtocol true
         credentials {
-            username System.getenv('ARCHIVA_USR')
-            password System.getenv('ARCHIVA_PSW')
+            username 'admin' //System.getenv('ARCHIVA_USR')
+            password 'popye@123' //System.getenv('ARCHIVA_PSW')
         }
     }
 }
