@@ -1,6 +1,8 @@
 #### REFERENCE
 * Repository to go along with the *How To Secure Your Gradle Credentials In Jenkins* article
 at [tomgregory.com](https://www.tomgregory.com).
+  
+* https://docs.gradle.org/current/userguide/publishing_maven.html (Kotlin for gradle 7.0)
 
 ## Pre-requisites
 
@@ -78,12 +80,20 @@ i.e., In this project we have provided `localhost:4333` to run locally and `arch
     }
 ```
 #### 3. How to make this project work in local environment?
-Make sure you have added following information into ENVIRONMENT
+Make sure you have added following information into ENVIRONMENT.
+
+Edit your profile file  `~/.bash-profile` or `~/.zshrc` or `~/.bashrc`
+
   ```
   export ARCHIVA_URL=localhost:4333
   export ARCHIVA_USR= << Whatever the name you have given in Jenkin System Credentials (with ID: 'archiva') >>
   export ARCHIVA_PSW= << Whatever the password you have given in Jenkin System Credentials (with ID: 'archiva') >>
   ```
+
+After you are done with edit make sure you call `source` to apply changes:
+
+`source ~/.bash-profile` (or) `source ~/.zshrc` (or) `source ~/.bashrc`
+
 #### 4. What are the build.gradle config we must need to push an `artifact` to `archiva` ?
 Typically, for a java library we would need minimum of following configurations.
 
