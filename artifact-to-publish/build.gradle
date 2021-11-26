@@ -9,6 +9,11 @@ publishing {
             groupId = project.group
             artifactId = project.name
             version = project.version
+            pom {
+                name = project.name
+                description = "This is to showcase that we can publish java project into archiva repo"
+                url = "www.popye.in"
+            }
 
             from components.java
         }
